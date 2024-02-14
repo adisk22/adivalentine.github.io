@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="valentine-box">
+        <h1>Adi's Valentine Request</h1>
+        <h2>Will You Be My Valentine?</h2>
+        <button id="yes-btn">Yes</button>
+        <button id="no-btn">No</button>
+        <p id="response"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+
+document.getElementById('yes-btn').addEventListener('click', function() {
+    document.getElementById('response').innerHTML = "i love u 💖. come to my house 6pm";
+});
+
+const noResponses = [
+    "I'm going to kill you 😊",
+    "PLEASE PICK YES PLEASE 😢",
+    "i'm going to kill myself",
+    "damn that's crazy",
+    "i hate you"
+];
+
+document.getElementById('no-btn').addEventListener('click', function() {
+    const randomIndex = Math.floor(Math.random() * noResponses.length);
+    document.getElementById('response').innerHTML = noResponses[randomIndex];
+});
+
+</script>
+
+</html>
+
